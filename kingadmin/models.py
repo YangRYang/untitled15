@@ -23,5 +23,5 @@ class Role(models.Model):
     Power = models.CharField(max_length=20)
 
 
-
+class
 
