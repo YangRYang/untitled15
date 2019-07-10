@@ -3,8 +3,7 @@ from django.db import models
 # Create your models here.
 class Customer(models.Model):
     name = models.CharField(max_length=20)
-    id = models.IntegerField(primary_key=True)
-
+    id = models.AutoField(primary_key=True)
     ChioceFiled = (
         (0,'高中'),
         (1,'大学'),
@@ -13,6 +12,9 @@ class Customer(models.Model):
     )
     education = models.IntegerField(choices=ChioceFiled)
     role = models.ForeignKey('Role',on_delete=models.SET_NULL,null=True)
+
+    def __str__(self):
+        return  self.name
 class Role(models.Model):
     RoleChioce = (
         (0,'领导'),
@@ -22,6 +24,8 @@ class Role(models.Model):
     Role = models.IntegerField(choices=RoleChioce)
     Power = models.CharField(max_length=20)
 
+    def __str__(self):
+        return self.get_Role_display()
 
-class
+
 

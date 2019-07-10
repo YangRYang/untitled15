@@ -20,4 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('abc/', views.psm),
     path('abeee/', views.ssk),
+    path('student/', views.showcustemor),
+    path('float/', views.float),
+
 ]

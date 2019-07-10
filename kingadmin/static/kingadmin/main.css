@@ -1,0 +1,20 @@
+    body{
+        font-size: 0px;
+        margin: 0px;
+    }
+
+
+    #top{
+        /*height: 160px;*/
+        /*background-color: beige;*/
+    }
+
+    #left{
+
+        /*position: fixed;*/
+        /*top: 0px;*/
+        bottom: 0px;
+        /*color: white;*/
+        width: 200px;
+        /*background-color: black;*/
+    }
