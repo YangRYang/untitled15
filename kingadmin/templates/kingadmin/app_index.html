@@ -1,8 +1,20 @@
 {% extends 'kingadmin/base.html' %}
 {% block body %}
-{% for name in app_name %}
-    <a href=""></a>
-{% endfor %}
+
+
+
+<table class="table">
+    {% for app,models in site.items %}
+       <tr><th>{{ app }}</th><th></th></tr>
+
+        {% for model in models %}
+           <tr><td> <a href="{% url 'table_obj_list' app model%}">{{ model }}</a></td><td><a href="{% url 'table_obj_list_add' app model%}">增加</a></td></tr>
+
+        {% endfor %}
+
+    {% endfor %}
+
+</table>
 
 
 
