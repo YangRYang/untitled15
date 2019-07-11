@@ -21,5 +21,9 @@ def sitea(request):
     return HttpResponse(site)
 
 def app_index(request):
+    app_name=[]
+    for app in site.youwrite:
+        app_name.append(app)
 
-    return render(request,)
+
+    return render(request,'kingadmin/app_index.html',{'app_name':app_name})

@@ -1,5 +1,5 @@
 from django.urls import path
 from kingadmin import views
 urlpatterns=[
-    # path('/',views.)
+    path('',views.app_index)
 ]
