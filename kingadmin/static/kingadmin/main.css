@@ -1,3 +1,4 @@
+
     body{
         font-size: 0px;
         margin: 0px;
@@ -5,16 +6,16 @@
 
 
     #top{
-        /*height: 160px;*/
-        /*background-color: beige;*/
+        height: 160px;
+        background-color: beige;
     }
 
     #left{
 
-        /*position: fixed;*/
-        /*top: 0px;*/
+        position: fixed;
+        top: 0px;
         bottom: 0px;
         /*color: white;*/
         width: 200px;
-        /*background-color: black;*/
+        background-color: black;
     }

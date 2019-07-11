@@ -7,15 +7,19 @@ def psm(request):
     return render(request,'kingadmin/haha.html')
 
 def ssk(request):
-    return render(request,'king/laozi.html')
+    return render(request, 'kingadmin/laozi.html')
 
 def showcustemor(request):
-    return render(request,'king/base.html')
+    return render(request, 'kingadmin/base.html')
 
 def float(request):
-    return render(request,'king/float.html')
+    return render(request, 'kingadmin/float.html')
 
 def sitea(request):
     print(dir(site))
     print(site.youwrite)
     return HttpResponse(site)
+
+def app_index(request):
+
+    return render(request,)
