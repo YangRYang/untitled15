@@ -22,5 +22,6 @@ urlpatterns = [
     path('abeee/', views.ssk),
     path('student/', views.showcustemor),
     path('float/', views.float),
+    path('site/', views.sitea),
 
 ]

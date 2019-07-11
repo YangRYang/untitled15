@@ -9,6 +9,7 @@ class adminsite():
     def register(self,model_class , admin_class=None):
         model = model_class._meta.model_name
         app = model_class._meta.app_label
+
         if not admin_class:
             admin_class = BaseAdmin()
         else:
