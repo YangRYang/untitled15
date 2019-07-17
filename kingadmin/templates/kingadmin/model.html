@@ -1,7 +1,15 @@
 {% extends 'kingadmin/base.html' %}
+{% load kingadmin_tags %}
 {% block body %}
 
-<div>这是一个model的列表</div>
+    <div>这是一个model的列表</div>
+    <table class="table table-striped">
+    {% for foo in queryset %}
+        {% create_table_row foo model_class %}
+    {% endfor %}
+    </table>
+
 
 
 {% endblock %}
+

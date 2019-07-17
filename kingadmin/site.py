@@ -14,6 +14,7 @@ class adminsite():
             admin_class = BaseAdmin()
         else:
             admin_class= admin_class()
+        admin_class.model = model_class
         if app not in self.youwrite:
             self.youwrite[app] = {}
         self.youwrite[app][model] = admin_class
