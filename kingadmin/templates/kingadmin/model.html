@@ -1,14 +1,45 @@
 {% extends 'kingadmin/base.html' %}
 {% load kingadmin_tags %}
 {% block body %}
+<div id="lalala">{{ model_class.search_value }}</div>
 
     <div>这是一个model的列表</div>
-    <table class="table table-striped">
-    {% for foo in queryset %}
-        {% create_table_row foo model_class %}
-    {% endfor %}
-    </table>
+    <form method="get"><input type="search" placeholder="{{ model_class.search_key }}" name="_q" value="{{ model_class.search_value }}">
+    <input type="submit"value="搜索">
+    </form>
+    <form method="get">
+        <select name="filter" id="filter">
+    {% if model_class.list_filter %}
+        {% for filter_filed in model_class.list_filter %}
+            {% get_select_filed filter_filed model_class %}
+        {% endfor %}
 
+
+    {% endif %}
+ </select>
+        <input type="submit"value="过滤">
+
+    </form>
+    <table class="table table-striped" style="margin-top: 50px">
+    <thead >
+    <th><input type="checkbox" value="all"></th>
+    {% for foo in model_class.list_display %}
+        <th>{{ foo }}</th>
+    {% endfor %}
+    
+    </thead>
+    <tbody>
+    {% for foo in queryset %}
+        <tr>
+            <td>
+                 <input type="checkbox"value="{{ obj.id }}">
+            </td>
+                 {% create_table_row foo model_class %}
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    
 
 
 {% endblock %}

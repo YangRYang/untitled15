@@ -1,4 +1,5 @@
 class BaseAdmin():
+    list_display=[]
     pass
 
 
